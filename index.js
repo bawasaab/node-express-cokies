@@ -45,6 +45,10 @@ app.get("/private", (req, res) => {
     res.status(200).json({ secret: "Ginger ale is a specific Root Beer", token: req.cookies.token });
 });
 
+app.post("/logout", (req, res) => {
+	res.clearCookie('token');
+});
+
 app.listen(3000, () => {
     console.log("listening on port 3000...");
 });
