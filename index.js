@@ -10,13 +10,29 @@ app.get("/", (req, res) => {
 
 app.post("/login", (req, res) => {
     // res.status(200).send("post login endpoint");
-
+    
+    /** set cookie starts type 1 **/
     res
     .writeHead(200, {
       "Set-Cookie": "token=encryptedstring; HttpOnly",
       "Access-Control-Allow-Credentials": "true"
     })
     .send();
+    /** set cookie starts type 1 **/
+    
+    /** set cookie starts type 2 **/
+		/*
+        res.cookie(
+			'token', 'someTokenValue', 
+			{
+				httpOnly: true, 
+				maxAge: DAY * 21, 
+				sameSite: "None", 
+				secure: true 
+			}
+		);
+        */
+    /** set cookie ends type 2 **/
 });
 
 app.get("/private", (req, res) => {
