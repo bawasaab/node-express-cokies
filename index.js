@@ -37,8 +37,11 @@ app.post("/login", (req, res) => {
 
 app.get("/private", (req, res) => {
     //   res.status(200).send("get private endpoint");
-
+	
+	/** get cookie starts **/
     if (!req.cookies.token) return res.status(401).send();
+	/** get cookie ends **/
+	
     res.status(200).json({ secret: "Ginger ale is a specific Root Beer", token: req.cookies.token });
 });
 
