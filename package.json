@@ -1,0 +1,25 @@
+{
+  "name": "node-express-cokies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bawasaab/node-express-cokies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bawasaab/node-express-cokies/issues"
+  },
+  "homepage": "https://github.com/bawasaab/node-express-cokies#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
